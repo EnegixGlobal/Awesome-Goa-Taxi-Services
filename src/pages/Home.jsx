@@ -1,12 +1,14 @@
 import React from "react";
 import HeroSlider from "../components/HeroSlider.jsx";
 import BookingSection from "../components/BookingSection.jsx";
+import HighlightSection from "../components/HighlightSection.jsx";
 
 export default function Home() {
   return (
     <main>
       <HeroSlider />
       <BookingSection />
+      <HighlightSection />
       {/* Placeholder sections */}
       <section id="about" className="max-w-5xl mx-auto px-6 py-24">
         <h2 className="text-3xl font-bold mb-6">About Our Service</h2>
