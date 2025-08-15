@@ -8,12 +8,12 @@ function classNames(...cls) {
 function VehicleCard({ v }) {
   return (
     <div className="bg-white rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col items-center relative overflow-hidden group">
-      <div className="pt-10 px-6 flex-1 flex flex-col items-center">
-        <div className="w-full flex items-center justify-center mb-6 relative">
+      <div className="pt-10 px-6 flex-1 flex flex-col items-center w-full">
+        <div className="w-full mb-6 relative rounded-t-2xl overflow-hidden bg-[#f7f7f7] flex items-center justify-center">
           <img
             src={v.image}
             alt={`${v.name} ${v.model}`}
-            className="max-h-56 object-contain transition-transform duration-500 group-hover:scale-[1.05]"
+            className="w-full h-56 object-cover rounded-t-2xl transition-transform duration-500 group-hover:scale-[1.05]"
             loading="lazy"
           />
         </div>
