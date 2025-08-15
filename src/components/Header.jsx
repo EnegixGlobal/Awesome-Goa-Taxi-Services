@@ -21,7 +21,7 @@ export default function Header() {
             <i className="fa-solid fa-envelope"></i>
           </span>
           <span className="font-medium text-white/90">
-            ubedshaikh6089@gmail.com
+            Servicecab@gmail.com
           </span>
         </div>
         {/* Center: Only Logo */}

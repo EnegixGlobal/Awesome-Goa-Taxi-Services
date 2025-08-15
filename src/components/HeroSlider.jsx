@@ -54,7 +54,7 @@ export default function HeroSlider() {
   const next = () => setIndex((i) => (i + 1) % slides.length);
 
   return (
-    <section className="relative h-[680px] w-full overflow-hidden flex items-center justify-center">
+    <section className="relative h-[680px] w-full overflow-hidden flex items-center justify-center border-b border-white/20">
       {slides.map((s, i) => (
         <div
           key={s.id}
