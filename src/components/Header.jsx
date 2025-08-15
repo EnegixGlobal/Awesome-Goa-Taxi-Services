@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../images/Website icon and favicon/icon.png";
 
 const navItems = [
@@ -11,11 +11,11 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="w-full absolute top-0 left-0 z-30">
-      {/* Top Utility Bar */}
+      {/* Desktop Utility Bar */}
       <div className="hidden md:grid grid-cols-3 items-center px-10 pt-4 text-sm">
-        {/* Left: Email (swapped) */}
         <div className="flex items-center gap-2 text-brandYellow">
           <span className="text-lg" aria-hidden="true">
             <i className="fa-solid fa-envelope"></i>
@@ -24,54 +24,107 @@ export default function Header() {
             Servicecab@gmail.com
           </span>
         </div>
-        {/* Center: Only Logo */}
         <div className="flex justify-center items-center">
           <img src={logo} alt="Website logo" className="h-16 object-contain" />
         </div>
-        {/* Right: Social icons (swapped) */}
         <div className="flex justify-end items-center gap-5 text-white/90">
           <a
             href="#"
             aria-label="Instagram"
             className="hover:text-brandYellow transition-colors text-lg"
           >
-            <i className="fa-brands fa-instagram"></i>
+            <i className="fa-brands fa-instagram" />
           </a>
           <a
             href="#"
             aria-label="Facebook"
             className="hover:text-brandYellow transition-colors text-lg"
           >
-            <i className="fa-brands fa-facebook-f"></i>
+            <i className="fa-brands fa-facebook-f" />
           </a>
         </div>
       </div>
-      {/* Navigation Bar */}
-      <div className="flex justify-center mt-6">
-        <div className="flex items-stretch bg-brandYellow rounded-full overflow-hidden shadow-pill max-w-6xl w-full md:w-auto">
-          <nav className="flex px-14 py-6 gap-10 text-xs font-semibold tracking-[0.25em]">
+      {/* Mobile Bar */}
+      <div className="md:hidden flex items-center justify-between px-5 pt-4">
+        <div className="flex items-center gap-3">
+          <img src={logo} alt="Logo" className="h-12 w-12 object-contain" />
+          <span className="text-lg font-bold tracking-wide">
+            <span className="text-brandYellow">Goa</span> Taxi
+          </span>
+        </div>
+        <button
+          onClick={() => setOpen((o) => !o)}
+          aria-label="Toggle navigation"
+          className="w-12 h-12 rounded-full bg-brandYellow text-black grid place-items-center text-2xl shadow-pill focus:outline-none focus:ring-2 focus:ring-white/40"
+        >
+          {open ? (
+            <i className="fa-solid fa-xmark" />
+          ) : (
+            <i className="fa-solid fa-bars" />
+          )}
+        </button>
+      </div>
+      {open && (
+        <div className="md:hidden px-5 mt-4">
+          <nav className="bg-brandYellow rounded-3xl p-6 space-y-4 shadow-pill">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="uppercase hover:text-black/70 text-black transition-colors"
+                onClick={() => setOpen(false)}
+                className="block uppercase tracking-[0.25em] text-sm font-semibold text-black/90 hover:text-black"
+              >
+                {item.label}
+              </a>
+            ))}
+            <a
+              href="tel:+919322119572"
+              className="flex items-center gap-4 bg-brandBlack text-white rounded-2xl px-5 py-4"
+            >
+              <span
+                className="w-12 h-12 rounded-full bg-brandYellow text-brandBlack grid place-items-center text-xl"
+                aria-hidden="true"
+              >
+                <i className="fa-solid fa-phone" />
+              </span>
+              <span className="text-left leading-tight">
+                <span className="block font-bold text-brandYellow text-base">
+                  +91 93221 19572
+                </span>
+                <span className="block text-[11px] uppercase tracking-wider">
+                  Phone No.
+                </span>
+              </span>
+            </a>
+          </nav>
+        </div>
+      )}
+      {/* Desktop Navigation Bar */}
+      <div className="hidden md:flex justify-center mt-6">
+        <div className="flex items-stretch bg-brandYellow rounded-full overflow-hidden shadow-pill max-w-7xl w-full md:w-auto h-[92px]">
+          <nav className="hidden md:flex items-center h-full px-16 gap-12 text-sm font-semibold tracking-[0.25em]">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="uppercase hover:text-black/70 text-black transition-colors flex items-center h-full leading-none"
               >
                 {item.label}
               </a>
             ))}
           </nav>
-          <div className="bg-brandBlack text-white flex items-center gap-4 pr-10 pl-2 rounded-l-full">
+          <div className="bg-brandBlack text-white flex items-center gap-5 pr-12 pl-3 rounded-l-full h-full">
             <div
-              className="w-14 h-14 bg-brandYellow text-brandBlack rounded-full grid place-items-center text-2xl"
+              className="w-16 h-16 bg-brandYellow text-brandBlack rounded-full grid place-items-center text-3xl"
               aria-hidden="true"
             >
-              <i className="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-phone" />
             </div>
-            <div className="leading-tight text-sm">
-              <div className="font-bold text-brandYellow text-base">
+            <div className="leading-tight text-[15px]">
+              <div className="font-bold text-brandYellow text-[17px]">
                 +91 93221 19572
               </div>
-              <div className="uppercase tracking-wider text-[11px]">
+              <div className="uppercase tracking-wider text-[12px]">
                 Phone No.
               </div>
             </div>

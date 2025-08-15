@@ -8,18 +8,18 @@ export default function BookingSection() {
       id="book"
       className="relative z-20 px-6 lg:px-10 pt-20 md:pt-28 pb-20 md:pb-28 border-b border-white/20"
     >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-14 md:gap-16 lg:gap-20 items-start">
         {/* Left content */}
         <div className="flex-1 max-w-xl">
           <div className="flex items-center gap-2 text-sm font-semibold tracking-wide mb-6">
             <span className="w-2 h-2 rounded-full bg-brandYellow inline-block" />
             <span className="text-white/80">Looking for taxi?</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold leading-[1.05] mb-8">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.05] mb-6 md:mb-8">
             <span className="block">Make your</span>
             <span className="block">booking</span>
           </h2>
-          <p className="text-white/70 leading-relaxed text-base md:text-lg max-w-md">
+          <p className="text-white/70 leading-relaxed text-sm sm:text-base md:text-lg max-w-md">
             Our taxis commit to make your trips unique by best answering your
             needs.
           </p>
@@ -35,7 +35,7 @@ export default function BookingSection() {
           <input type="hidden" name="_subject" value="New Taxi Booking" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 xl:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 xl:gap-8">
             <div className="col-span-1">
               <input
                 type="text"

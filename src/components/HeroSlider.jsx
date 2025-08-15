@@ -54,7 +54,7 @@ export default function HeroSlider() {
   const next = () => setIndex((i) => (i + 1) % slides.length);
 
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden flex items-center justify-center border-b border-white/20">
+    <section className="relative h-screen min-h-[560px] w-full overflow-hidden flex items-center justify-center border-b border-white/20">
       {slides.map((s, i) => (
         <div
           key={s.id}
@@ -70,17 +70,17 @@ export default function HeroSlider() {
           <div className="absolute inset-0 bg-black/60" />
         </div>
       ))}
-      <div className="relative z-10 max-w-4xl text-center px-6 mt-32">
-        <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-8">
+      <div className="relative z-10 max-w-4xl text-center px-4 sm:px-6 mt-28 sm:mt-32">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6 sm:mb-8">
           {slides[index].title}
         </h1>
-        <p className="text-lg md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
           {slides[index].subtitle}
         </p>
-        <div className="mt-10">
+        <div className="mt-8 sm:mt-10">
           <a
             href="#about"
-            className="inline-block bg-brandYellow text-black font-semibold px-12 py-5 rounded-full text-lg shadow-pill hover:brightness-95 transition"
+            className="inline-block bg-brandYellow text-black font-semibold px-10 py-4 sm:px-12 sm:py-5 rounded-full text-base sm:text-lg shadow-pill hover:brightness-95 transition"
           >
             Learn More
           </a>
@@ -89,14 +89,14 @@ export default function HeroSlider() {
       <button
         onClick={prev}
         aria-label="Previous slide"
-        className="absolute left-16 md:left-24 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2 border-white text-white text-2xl grid place-items-center hover:bg-white hover:text-black transition"
+        className="hidden sm:grid absolute left-6 md:left-16 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-white text-white text-xl md:text-2xl place-items-center hover:bg-white hover:text-black transition"
       >
         ←
       </button>
       <button
         onClick={next}
         aria-label="Next slide"
-        className="absolute right-16 md:right-24 top-1/2 -translate-y-1/2 w-16 h-16 rounded-full border-2 border-white text-white text-2xl grid place-items-center hover:bg-white hover:text-black transition"
+        className="hidden sm:grid absolute right-6 md:right-16 top-1/2 -translate-y-1/2 w-12 h-12 md:w-16 md:h-16 rounded-full border-2 border-white text-white text-xl md:text-2xl place-items-center hover:bg-white hover:text-black transition"
       >
         →
       </button>
