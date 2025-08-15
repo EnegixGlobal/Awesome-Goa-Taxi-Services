@@ -4,6 +4,7 @@ import BookingSection from "../components/BookingSection.jsx";
 import HighlightSection from "../components/HighlightSection.jsx";
 import StatsSection from "../components/StatsSection.jsx";
 import WhyChooseUs from "../components/WhyChooseUs.jsx";
+import ChooseTaxiSection from "../components/ChooseTaxiSection.jsx";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HighlightSection />
       <StatsSection />
       <WhyChooseUs />
+      <ChooseTaxiSection />
       {/* Placeholder sections */}
       <section id="about" className="max-w-5xl mx-auto px-6 py-24">
         <h2 className="text-3xl font-bold mb-6">About Our Service</h2>
