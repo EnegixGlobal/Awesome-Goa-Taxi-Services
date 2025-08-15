@@ -56,11 +56,13 @@ function Feature({ icon, title, desc, withDivider }) {
   );
 }
 
+const features = [...featuresTop, ...featuresBottom];
+
 export default function WhyChooseUs() {
   return (
     <section
       id="why"
-      className="bg-brandBlack text-white h-screen min-h-[680px] flex items-center py-24"
+      className="bg-brandBlack text-white py-24 lg:h-screen lg:min-h-[680px] lg:flex lg:items-center"
     >
       <div className="max-w-6xl mx-auto w-full px-6">
         <div className="flex items-center gap-2 text-[11px] font-semibold tracking-wide mb-4 justify-center">
@@ -69,17 +71,12 @@ export default function WhyChooseUs() {
             Reliable, Affordable & Safe – Your Trusted Taxi Service 24/7
           </span>
         </div>
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-center mb-20 tracking-tight">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-center mb-14 sm:mb-20 tracking-tight">
           Why choose us
         </h2>
-        <div className="grid md:grid-cols-3 gap-14 mb-14">
-          {featuresTop.map((f, idx) => (
-            <Feature key={f.title} {...f} withDivider={idx !== 0} />
-          ))}
-        </div>
-        <div className="grid md:grid-cols-3 gap-14">
-          {featuresBottom.map((f, idx) => (
-            <Feature key={f.title} {...f} withDivider={idx !== 0} />
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-12 sm:gap-x-10 sm:gap-y-14">
+          {features.map((f, idx) => (
+            <Feature key={f.title} {...f} withDivider={idx % 3 !== 0} />
           ))}
         </div>
       </div>

@@ -88,7 +88,7 @@ export default function BookingSection() {
                 name="date"
                 required
                 placeholder="Select Date"
-                className="w-full h-20 rounded-full bg-brandGray px-10 pr-14 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className="w-full h-20 rounded-full bg-brandGray px-10 pr-14 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none [color-scheme:dark] [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-0"
               />
               <span className="absolute right-8 top-1/2 -translate-y-1/2 text-brandYellow text-xl pointer-events-none">
                 <i className="fa-regular fa-calendar"></i>
