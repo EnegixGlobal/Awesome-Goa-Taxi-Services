@@ -1,5 +1,6 @@
 import React from "react";
 import imgMain from "../../images/third section/1.png";
+import imgAlt from "../../images/third section/2.jpeg";
 
 export default function HighlightSection() {
   return (
@@ -11,7 +12,7 @@ export default function HighlightSection() {
         {/* Eyebrow */}
         <div className="flex items-center gap-2 text-[11px] font-semibold tracking-wide text-brandBlack/80 mb-6">
           <span className="w-2 h-2 rounded-full bg-brandYellow inline-block" />
-          <span>Welcome to NorthGoaTaxiService</span>
+          <span>Welcome to Awesome Goa Taxi Services</span>
         </div>
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight max-w-4xl mb-14">
@@ -21,7 +22,7 @@ export default function HighlightSection() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: Image */}
-          <div className="rounded-md overflow-hidden shadow-lg aspect-[4/5] bg-gray-200">
+          <div className="rounded-md overflow-hidden shadow-lg aspect-[8/9] bg-gray-200">
             <img
               src={imgMain}
               alt="Professional driver in taxi"
@@ -45,8 +46,8 @@ export default function HighlightSection() {
               </div>
               <div className="relative h-56 sm:h-auto min-h-[220px] bg-black/10">
                 <img
-                  src={imgMain}
-                  alt="Taxi service highlight"
+                  src={imgAlt}
+                  alt="Taxi branding and service"
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
@@ -62,14 +63,12 @@ export default function HighlightSection() {
 
             {/* Description */}
             <p className="text-sm sm:text-base leading-relaxed text-brandBlack/80">
-              At Northgoataxiservice, we are committed to delivering a
-              high-quality taxi service that prioritizes comfort, safety, and
-              reliability. With professional drivers, well-maintained vehicles,
-              and a customer-first approach, we ensure a smooth and stress-free
-              journey every time. Whether it's a daily commute, airport
-              transfer, or long-distance travel, our service is designed to meet
-              your needs with punctuality and efficiency. Experience the
-              difference with a taxi service you can trust.
+              At Awesome Goa Taxi Services, we deliver dependable, comfortable
+              and safe rides with friendly professional drivers and
+              well‑maintained cars. Our customer-first approach keeps every
+              journey smooth and stress‑free—daily commutes, airport pickups or
+              long trips. Count on punctuality, transparent service and a
+              reliable experience you can trust every time.
             </p>
 
             {/* Call to action */}

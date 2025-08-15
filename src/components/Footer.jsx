@@ -83,7 +83,7 @@ export default function Footer() {
         <div>
           © 2025{" "}
           <span className="font-semibold text-brandYellow">
-            Northgoataxiservice.com
+            AwesomeGoaTaxiServices.com
           </span>
         </div>
         <div className="flex gap-8">

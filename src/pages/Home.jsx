@@ -13,9 +13,9 @@ export default function Home() {
       <section id="about" className="max-w-5xl mx-auto px-6 py-24">
         <h2 className="text-3xl font-bold mb-6">About Our Service</h2>
         <p className="text-white/70 leading-relaxed">
-          We provide top-notch taxi services across North Goa with a focus on
-          safety, punctuality, and comfort. Our experienced drivers and
-          well-maintained vehicles ensure a pleasant journey every time.
+          Awesome Goa Taxi Services provides top‑notch rides across Goa with a
+          focus on safety, punctuality and comfort. Our experienced drivers and
+          well‑maintained vehicles ensure a pleasant journey every time.
         </p>
       </section>
     </main>
