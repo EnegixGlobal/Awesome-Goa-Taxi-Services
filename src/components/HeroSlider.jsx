@@ -54,7 +54,8 @@ export default function HeroSlider() {
   const next = () => setIndex((i) => (i + 1) % slides.length);
 
   return (
-    <section className="relative h-screen min-h-[560px] w-full overflow-hidden flex items-center justify-center border-b border-white/20">
+    // Mobile height reduced ~30% (70vh) while keeping full height from sm breakpoint upwards
+    <section className="relative h-[70vh] sm:h-screen min-h-[400px] sm:min-h-[560px] w-full overflow-hidden flex items-center justify-center border-b border-white/20">
       {slides.map((s, i) => (
         <div
           key={s.id}
