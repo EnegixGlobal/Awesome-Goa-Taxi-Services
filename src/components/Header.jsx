@@ -7,7 +7,7 @@ const navItems = [
   { label: "Home", to: "/" },
   { label: "About", to: "/about" },
   { label: "Our Taxi", to: "/taxi" },
-  { label: "Book A Ride", hash: "#book" },
+  { label: "Book A Ride", to: "/book" },
   { label: "Contact", hash: "#contact" },
   { label: "Gallery", hash: "#gallery" },
 ];

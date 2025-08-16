@@ -5,7 +5,7 @@ const columnLinks = {
   useful: [
     { label: "Home", href: "#" },
     { label: "About", href: "/about" },
-    { label: "Book A Ride", href: "#book" },
+    { label: "Book A Ride", href: "/book" },
     { label: "Fleet", href: "#fleet" },
     { label: "Packages", href: "#packages" },
     { label: "Testimonials", href: "#testimonials" },
