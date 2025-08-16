@@ -14,7 +14,7 @@ const columnLinks = {
     { label: "Why Choose Us", href: "#why" },
     { label: "Stats", href: "#stats" },
     { label: "FAQs", href: "#faqs" },
-    { label: "Privacy Policy", href: "#" },
+    { label: "Privacy Policy", href: "/privacy" },
   ],
 };
 
@@ -104,10 +104,10 @@ export default function Footer() {
           </span>
         </div>
         <div className="flex gap-8">
-          <a href="#" className="hover:text-brandYellow">
+          <a href="/terms" className="hover:text-brandYellow">
             Terms and conditions
           </a>
-          <a href="#" className="hover:text-brandYellow">
+          <a href="/privacy" className="hover:text-brandYellow">
             Privacy Policy
           </a>
         </div>
