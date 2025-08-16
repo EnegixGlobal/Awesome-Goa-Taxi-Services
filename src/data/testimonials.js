@@ -24,14 +24,14 @@ export const testimonials = [
   },
   {
     id: 3,
-    name: "Rohit Kulkarni",
+    name: "Suman Kumari",
     role: "Software Engineer",
     avatar: client3,
     text: "Great experience overall. The driver knew the routes well and avoided traffic smartly. Pricing was fair and payment was seamless. Will surely use the service again for weekend trips.",
   },
   {
     id: 4,
-    name: "Neha Desai",
+    name: "Rohit Kulkarni",
     role: "Travel Blogger",
     avatar: client4,
     text: "Loved the punctuality and hospitality. I booked for a full-day sightseeing tour and the experience was fantastic. Comfortable ride, patient driver and smooth coordination all through.",
