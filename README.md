@@ -1,31 +1,54 @@
-# React + Vite + Tailwind (JS)
+## Awesome Goa Taxi Service
 
-Minimal starter using Vite, React 18, TailwindCSS, and Vitest + Testing Library.
+Responsive single‑page taxi booking site built with React + Vite + Tailwind. Features hero slider, booking form, fleet filter, tour packages, testimonials, FAQs, and static pages (About, Gallery, Terms, Privacy, Contact w/ map).
 
-## Scripts
+### Stack
 
-- `npm run dev` start dev server
-- `npm run build` production build
-- `npm run preview` preview production build
-- `npm test` run unit tests once
+React 18, Vite, TailwindCSS, React Router, Vitest (+ Testing Library).
 
-## Setup
+### Quick Start
 
-```bash
+```
 npm install
 npm run dev
 ```
 
-Then open http://localhost:5173
+Visit http://localhost:5173
 
-## Tailwind
+### Build / Preview
 
-Utility classes come from `tailwindcss` with config in `tailwind.config.js`.
+```
+npm run build
+npm run preview
+```
 
-## Testing
+Deploy the generated `dist/` folder (works on Vercel/Netlify/static hosting).
 
-Uses Vitest + jsdom + @testing-library/react.
+### Important Customizations
 
-## Notes
+- Phone call CTAs link to +91 90499 120096.
+- Booking form posts via formsubmit.co.
+- Mobile optimizations: reduced hero & form height, custom date input placeholder.
 
-Project intentionally uses plain JS (no TypeScript).
+### Structure (key paths)
+
+`src/components` UI building blocks
+`src/pages` routed pages
+`src/sections` larger page sections
+`src/data` static data (vehicles, packages, testimonials)
+
+### Scripts
+
+`dev` local server
+`build` production build
+`preview` serve build
+`test` run unit tests
+
+### License / Use
+
+Internal project; adjust as needed before open sourcing.
+
+### Contact
+
+Design & Dev: Enegix Web Solutions (https://www.enegixwebsolutions.com/)
+Developer: Kunal Kumar Pandit (https://www.linkedin.com/in/kunalkumarpandit/)
