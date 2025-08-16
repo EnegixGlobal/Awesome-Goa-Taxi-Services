@@ -1,6 +1,8 @@
 import React from "react";
 import PageHero from "../sections/PageHero.jsx";
 import ChooseTaxiSection from "../components/ChooseTaxiSection.jsx";
+import WhyChooseUs from "../components/WhyChooseUs.jsx";
+import FAQsSection from "../components/FAQsSection.jsx";
 
 export default function OurTaxi() {
   return (
@@ -10,6 +12,10 @@ export default function OurTaxi() {
         subtitle="Browse our well-maintained fleet and choose the perfect ride for your journey."
       />
       <ChooseTaxiSection />
+      <div className="bg-brandBlack text-white">
+        <WhyChooseUs />
+      </div>
+      <FAQsSection />
     </main>
   );
 }
