@@ -1,19 +1,20 @@
 import React from "react";
 
 // Map visible label to anchor hash; only include real sections present on home page
+// Curated minimal link lists (removed less critical footer links like Stats / Testimonials)
 const columnLinks = {
   useful: [
-    { label: "Home", href: "#" },
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
+    { label: "Fleet", href: "/#fleet" },
+    { label: "Packages", href: "/#packages" },
     { label: "Book A Ride", href: "/book" },
-    { label: "Fleet", href: "#fleet" },
-    { label: "Packages", href: "#packages" },
-    { label: "Testimonials", href: "#testimonials" },
+    { label: "Contact", href: "/contact" },
   ],
   support: [
-    { label: "Why Choose Us", href: "#why" },
-    { label: "Stats", href: "#stats" },
-    { label: "FAQs", href: "#faqs" },
+    { label: "Why Choose Us", href: "/#why" },
+    { label: "FAQs", href: "/#faqs" },
+    { label: "Terms & Conditions", href: "/terms" },
     { label: "Privacy Policy", href: "/privacy" },
   ],
 };
@@ -105,7 +106,7 @@ export default function Footer() {
         </div>
         <div className="flex gap-8">
           <a href="/terms" className="hover:text-brandYellow">
-            Terms and conditions
+            Terms & Conditions
           </a>
           <a href="/privacy" className="hover:text-brandYellow">
             Privacy Policy
