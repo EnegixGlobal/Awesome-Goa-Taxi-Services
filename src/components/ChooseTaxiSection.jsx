@@ -54,12 +54,13 @@ function VehicleCard({ v }) {
         </ul>
       </div>
       <div className="w-full px-4 sm:px-6 pb-8 sm:pb-10">
-        <button
-          type="button"
-          className="w-full bg-[#f2f2f2] hover:bg-brandYellow hover:text-brandBlack transition-colors font-semibold text-xs sm:text-sm rounded-full py-3 sm:py-4 tracking-wide"
+        <a
+          href="tel:+9190499120096"
+          className="block text-center w-full bg-[#f2f2f2] hover:bg-brandYellow hover:text-brandBlack transition-colors font-semibold text-xs sm:text-sm rounded-full py-3 sm:py-4 tracking-wide focus:outline-none focus:ring-2 focus:ring-brandYellow/70"
+          aria-label={`Call to book ${v.name} taxi`}
         >
           Book Taxi
-        </button>
+        </a>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import logoIcon from "../../images/Website icon and favicon/icon.png";
 
 // Curated minimal link lists for clarity; using ids on home page with /# for cross-page navigation
 const columnLinks = {
@@ -99,6 +100,15 @@ export default function Footer() {
             </li>
           </ul>
         </div>
+      </div>
+      {/* Mobile Logo */}
+      <div className="mt-6 md:hidden flex justify-center">
+        <img
+          src={logoIcon}
+          alt="Company Logo"
+          className="h-14 w-auto opacity-90"
+          loading="lazy"
+        />
       </div>
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto mt-8 md:mt-10 pt-5 md:pt-6 border-t border-white/10 px-6 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-3 text-[11px] md:text-xs tracking-wide text-center md:text-left">
