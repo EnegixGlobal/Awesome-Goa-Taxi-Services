@@ -1,7 +1,6 @@
 import React from "react";
 
-// Map visible label to anchor hash; only include real sections present on home page
-// Curated minimal link lists (removed less critical footer links like Stats / Testimonials)
+// Curated minimal link lists for clarity; using ids on home page with /# for cross-page navigation
 const columnLinks = {
   useful: [
     { label: "Home", href: "/" },
@@ -21,11 +20,12 @@ const columnLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-brandBlack text-white pt-14 pb-8 mt-16 relative z-10">
-      <div className="max-w-7xl mx-auto px-6 grid gap-8 md:grid-cols-4 lg:grid-cols-4">
-        <div className="md:col-span-1 space-y-4 max-w-xs">
-          <h3 className="font-semibold text-lg mb-1">About Us</h3>
-          <p className="text-sm leading-relaxed text-white/80">
+    <footer className="bg-brandBlack text-white pt-10 pb-6 md:pt-14 md:pb-8 mt-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 grid gap-10 sm:gap-8 sm:grid-cols-2 md:grid-cols-4">
+        {/* About */}
+        <div className="space-y-5 max-w-sm sm:max-w-xs">
+          <h3 className="font-semibold text-lg">About Us</h3>
+          <p className="text-sm leading-relaxed text-white/80 tracking-wide">
             We are a reliable and professional taxi service dedicated to
             providing safe, comfortable, and affordable rides. Whether it's a
             daily commute, airport transfer, or long-distance journey, our
@@ -55,8 +55,9 @@ export default function Footer() {
             </a>
           </div>
         </div>
+        {/* Useful Links */}
         <div className="space-y-4">
-          <h3 className="font-semibold mb-2">Useful Links</h3>
+          <h3 className="font-semibold mb-1">Useful Links</h3>
           <ul className="space-y-2 text-sm">
             {columnLinks.useful.map((l) => (
               <li key={l.label}>
@@ -67,8 +68,9 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+        {/* Support Links */}
         <div className="space-y-4">
-          <h3 className="font-semibold mb-2">Support Links</h3>
+          <h3 className="font-semibold mb-1">Support Links</h3>
           <ul className="space-y-2 text-sm">
             {columnLinks.support.map((l) => (
               <li key={l.label}>
@@ -79,8 +81,9 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+        {/* Contact */}
         <div className="space-y-4">
-          <h3 className="font-semibold mb-2">Contact Us</h3>
+          <h3 className="font-semibold mb-1">Contact Us</h3>
           <ul className="space-y-3 text-sm text-white/80">
             <li>
               Calangute Mapusa Fuldem Vaddo, Nagoa Arpora, Bardez - Goa PIN
@@ -97,19 +100,23 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-white/10 px-6 flex flex-col md:flex-row justify-between gap-4 text-xs tracking-wide">
-        <div>
+      {/* Bottom Bar */}
+      <div className="max-w-7xl mx-auto mt-8 md:mt-10 pt-5 md:pt-6 border-t border-white/10 px-6 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-3 text-[11px] md:text-xs tracking-wide text-center md:text-left">
+        <div className="text-white/70 order-2 md:order-1">
           © 2025{" "}
           <span className="font-semibold text-brandYellow">
             Awesome Goa Taxi Service
           </span>
         </div>
-        <div className="flex gap-8">
-          <a href="/terms" className="hover:text-brandYellow">
-            Terms & Conditions
-          </a>
-          <a href="/privacy" className="hover:text-brandYellow">
-            Privacy Policy
+        <div className="text-white/60 order-1 md:order-2">
+          Designed & developed by{" "}
+          <a
+            href="https://www.enegixwebsolutions.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-white hover:text-brandYellow"
+          >
+            Enegix Web Solutions
           </a>
         </div>
       </div>
