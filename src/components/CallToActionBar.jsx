@@ -17,8 +17,9 @@ export default function CallToActionBar() {
         </div>
         <div>
           <a
-            href="tel:+919322119572"
-            className="inline-block bg-brandBlack text-white font-semibold text-sm sm:text-base px-10 py-4 rounded-full shadow-pill hover:brightness-110 transition"
+            href="tel:+9190499120096"
+            className="inline-block bg-brandBlack text-white font-semibold text-sm sm:text-base px-10 py-4 rounded-full shadow-pill hover:brightness-110 transition focus:outline-none focus:ring-2 focus:ring-brandBlack/40"
+            aria-label="Call to book taxi"
           >
             Book Taxi Now
           </a>
