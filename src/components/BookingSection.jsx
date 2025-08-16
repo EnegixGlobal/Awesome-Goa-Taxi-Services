@@ -88,26 +88,36 @@ export default function BookingSection() {
             <div className="col-span-1 relative">
               <input
                 ref={dateRef}
-                // When empty we keep type=text so placeholder shows; on focus we switch to date
-                type={date ? "date" : "text"}
+                type="date"
                 name="date"
                 required
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
-                onFocus={(e) => {
-                  if (!date) e.target.type = "date";
+                onClick={() => {
+                  if (
+                    dateRef.current &&
+                    typeof dateRef.current.showPicker === "function"
+                  ) {
+                    try {
+                      dateRef.current.showPicker();
+                    } catch (_) {}
+                  }
                 }}
-                onBlur={(e) => {
-                  if (!date) e.target.type = "text"; // revert to text so placeholder is visible again
-                }}
-                placeholder="DD/MM/YYYY"
-                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 pr-14 text-sm md:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className={`peer w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 pr-14 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none [color-scheme:dark] [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:cursor-pointer ${
+                  !date
+                    ? "caret-white text-transparent [&::-webkit-datetime-edit]:text-transparent [&::-webkit-datetime-edit-text]:text-transparent [&::-webkit-datetime-edit-month-field]:text-transparent [&::-webkit-datetime-edit-day-field]:text-transparent [&::-webkit-datetime-edit-year-field]:text-transparent"
+                    : "text-white"
+                }`}
               />
+              {!date && (
+                <span className="pointer-events-none absolute left-8 md:left-10 top-1/2 -translate-y-1/2 text-sm md:text-base text-white/50 tracking-wide select-none">
+                  DD/MM/YYYY
+                </span>
+              )}
               <button
                 type="button"
                 aria-label="Open date picker"
                 onClick={() => {
-                  // Try the new showPicker API if available; fallback to focusing
                   if (dateRef.current) {
                     if (typeof dateRef.current.showPicker === "function") {
                       try {

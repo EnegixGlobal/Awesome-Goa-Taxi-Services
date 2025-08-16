@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import slide1 from "../../images/hero slider images/1.jpg";
 import slide2 from "../../images/hero slider images/2.jpg";
 import slide3 from "../../images/hero slider images/3.png";
@@ -79,12 +80,12 @@ export default function HeroSlider() {
           {slides[index].subtitle}
         </p>
         <div className="mt-8 sm:mt-10">
-          <a
-            href="#about"
-            className="inline-block bg-brandYellow text-black font-semibold px-10 py-4 sm:px-12 sm:py-5 rounded-full text-base sm:text-lg shadow-pill hover:brightness-95 transition"
+          <Link
+            to="/about"
+            className="inline-block bg-brandYellow text-black font-semibold px-10 py-4 sm:px-12 sm:py-5 rounded-full text-base sm:text-lg shadow-pill hover:brightness-95 transition focus:outline-none focus:ring-2 focus:ring-brandYellow/60"
           >
             Learn More
-          </a>
+          </Link>
         </div>
       </div>
       <button
