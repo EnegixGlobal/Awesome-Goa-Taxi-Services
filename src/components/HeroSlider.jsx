@@ -9,7 +9,7 @@ const slides = [
   {
     id: 1,
     title: "Cheap & Trusted Taxi Company",
-    subtitle: "Enjoy your comfortable trip with Awesome Goa Taxi Services",
+    subtitle: "Enjoy your comfortable trip with Awesome Goa Taxi Service",
     image: slide1,
   },
   {

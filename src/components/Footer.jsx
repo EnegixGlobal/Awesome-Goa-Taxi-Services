@@ -82,12 +82,12 @@ export default function Footer() {
           <h3 className="font-semibold mb-2">Contact Us</h3>
           <ul className="space-y-3 text-sm text-white/80">
             <li>
-              Freates waddo Verla canca mapusa bardez north Goa Pincode:-
-              Pincode 403510
+              Calangute Mapusa Fuldem Vaddo, Nagoa Arpora, Bardez - Goa PIN
+              341001
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <i className="fa-solid fa-envelope text-sm" aria-hidden="true" />
-              <span className="text-white/90">Servicecab@gmail.com</span>
+              <span className="text-white/90">servicecab@gmail.com</span>
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <i className="fa-solid fa-phone text-sm" aria-hidden="true" />
@@ -100,7 +100,7 @@ export default function Footer() {
         <div>
           © 2025{" "}
           <span className="font-semibold text-brandYellow">
-            AwesomeGoaTaxiServices.com
+            Awesome Goa Taxi Service
           </span>
         </div>
         <div className="flex gap-8">

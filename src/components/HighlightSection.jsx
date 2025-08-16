@@ -12,7 +12,7 @@ export default function HighlightSection() {
         {/* Eyebrow */}
         <div className="flex items-center gap-2 text-[11px] font-semibold tracking-wide text-brandBlack/80 mb-6">
           <span className="w-2 h-2 rounded-full bg-brandYellow inline-block" />
-          <span>Welcome to Awesome Goa Taxi Services</span>
+          <span>Welcome to Awesome Goa Taxi Service</span>
         </div>
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight max-w-4xl mb-14">
@@ -63,7 +63,7 @@ export default function HighlightSection() {
 
             {/* Description */}
             <p className="text-sm sm:text-base leading-relaxed text-brandBlack/80">
-              At Awesome Goa Taxi Services, we deliver dependable, comfortable
+              At Awesome Goa Taxi Service, we deliver dependable, comfortable
               and safe rides with friendly professional drivers and
               well‑maintained cars. Our customer-first approach keeps every
               journey smooth and stress‑free—daily commutes, airport pickups or
@@ -84,10 +84,10 @@ export default function HighlightSection() {
                 </div>
               </div>
               <a
-                href="tel:+919322119572"
+                href="tel:+9190499120096"
                 className="text-xl font-extrabold tracking-wide hover:text-brandYellow transition"
               >
-                +91 93221 19572
+                +91 90499 120096
               </a>
             </div>
           </div>
