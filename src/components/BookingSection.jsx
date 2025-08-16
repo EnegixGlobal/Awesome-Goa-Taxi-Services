@@ -9,7 +9,7 @@ export default function BookingSection() {
   return (
     <section
       id="book"
-      className="relative z-20 px-6 lg:px-10 pt-20 md:pt-28 pb-20 md:pb-28 border-b border-white/20"
+      className="relative z-20 px-6 lg:px-10 pt-16 md:pt-28 pb-16 md:pb-28 border-b border-white/20"
     >
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-14 md:gap-16 lg:gap-20 items-start">
         {/* Left content */}
@@ -45,7 +45,7 @@ export default function BookingSection() {
                 name="name"
                 required
                 placeholder="Your Name"
-                className="w-full h-20 rounded-full bg-brandGray px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
               />
             </div>
             <div className="col-span-1">
@@ -54,7 +54,7 @@ export default function BookingSection() {
                 name="email"
                 required
                 placeholder="Email Address"
-                className="w-full h-20 rounded-full bg-brandGray px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
               />
             </div>
             <div className="col-span-1">
@@ -64,7 +64,7 @@ export default function BookingSection() {
                 name="passengers"
                 required
                 placeholder="Passengers #"
-                className="w-full h-20 rounded-full bg-brandGray px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
               />
             </div>
             <div className="col-span-1">
@@ -73,7 +73,7 @@ export default function BookingSection() {
                 name="pickup"
                 required
                 placeholder="Pick-up Address"
-                className="w-full h-20 rounded-full bg-brandGray px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
               />
             </div>
             <div className="col-span-1">
@@ -82,7 +82,7 @@ export default function BookingSection() {
                 name="dropoff"
                 required
                 placeholder="Drop-off Address"
-                className="w-full h-20 rounded-full bg-brandGray px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
               />
             </div>
             <div className="col-span-1 relative">
@@ -101,7 +101,7 @@ export default function BookingSection() {
                   if (!date) e.target.type = "text"; // revert to text so placeholder is visible again
                 }}
                 placeholder="DD/MM/YYYY"
-                className="w-full h-20 rounded-full bg-brandGray px-10 pr-14 text-sm md:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 pr-14 text-sm md:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
               />
               <button
                 type="button"
@@ -128,7 +128,7 @@ export default function BookingSection() {
             <div className="col-span-1 relative md:col-span-1">
               <select
                 name="time_slot"
-                className="w-full h-20 rounded-full bg-brandGray px-10 pr-16 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none"
+                className="w-full h-14 md:h-20 rounded-full bg-brandGray px-8 md:px-10 pr-16 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none"
                 defaultValue="12AM-6AM"
               >
                 <option>12AM-6AM</option>
@@ -143,7 +143,7 @@ export default function BookingSection() {
             <div className="col-span-1 md:col-span-1 flex items-stretch">
               <button
                 type="submit"
-                className="w-full h-20 rounded-full bg-brandYellow text-black font-semibold tracking-wide text-base md:text-lg hover:brightness-95 transition shadow-pill"
+                className="w-full h-14 md:h-20 rounded-full bg-brandYellow text-black font-semibold tracking-wide text-sm md:text-lg hover:brightness-95 transition shadow-pill"
               >
                 Book Now
               </button>
