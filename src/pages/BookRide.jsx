@@ -1,5 +1,6 @@
 import React from "react";
 import PageHero from "../sections/PageHero.jsx";
+import { vehicles } from "../data/vehicles.js";
 
 function BookingFormStandalone() {
   return (
@@ -125,11 +126,17 @@ function BookingFormStandalone() {
               <select
                 name="car_model"
                 className="w-full h-10 sm:h-12 rounded-full bg-[#f2f2f2] px-5 text-[11px] sm:text-xs md:text-[13px] focus:outline-none focus:ring-2 focus:ring-brandYellow/70"
+                defaultValue=""
               >
-                <option value="Any">Car model</option>
-                <option value="Swift">Swift</option>
-                <option value="Dzire">Dzire</option>
-                <option value="Innova">Innova</option>
+                <option value="" disabled>
+                  Select car model
+                </option>
+                <option value="Any">Any Available</option>
+                {vehicles.map((v) => (
+                  <option key={v.id} value={v.name}>
+                    {v.name}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="pt-6 md:pt-9">
