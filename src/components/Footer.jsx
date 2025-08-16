@@ -82,7 +82,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <span>✉</span>
-              <span className="text-white/90">ubedshaikh6089@gmail.com</span>
+              <span className="text-white/90">Servicecab@gmail.com</span>
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <span>☎</span>
