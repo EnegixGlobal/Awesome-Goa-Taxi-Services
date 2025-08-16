@@ -3,6 +3,7 @@ import AboutHero from "../sections/AboutHero.jsx";
 import CompanyIntro from "../sections/CompanyIntro.jsx";
 import WhyChooseUs from "../components/WhyChooseUs.jsx";
 import ChooseTaxiSection from "../components/ChooseTaxiSection.jsx";
+import CallToActionBar from "../components/CallToActionBar.jsx";
 
 export default function About() {
   return (
@@ -13,6 +14,7 @@ export default function About() {
         <WhyChooseUs />
       </div>
       <ChooseTaxiSection />
+      <CallToActionBar />
     </main>
   );
 }
