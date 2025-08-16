@@ -9,7 +9,7 @@ const navItems = [
   { label: "Our Taxi", to: "/taxi" },
   { label: "Book A Ride", to: "/book" },
   { label: "Contact", to: "/contact" },
-  { label: "Gallery", hash: "#gallery" },
+  { label: "Gallery", to: "/gallery" },
 ];
 
 export default function Header() {

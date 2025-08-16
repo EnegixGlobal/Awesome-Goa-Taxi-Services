@@ -36,17 +36,21 @@ export default function Footer() {
               className="hover:text-brandYellow"
               aria-label="Facebook"
             >
-              
+              <i className="fa-brands fa-facebook-f" />
             </a>
             <a
               href="#"
               className="hover:text-brandYellow"
               aria-label="Instagram"
             >
-              
+              <i className="fa-brands fa-instagram" />
             </a>
-            <a href="#" className="hover:text-brandYellow" aria-label="Google">
-              
+            <a
+              href="#"
+              className="hover:text-brandYellow"
+              aria-label="WhatsApp"
+            >
+              <i className="fa-brands fa-whatsapp" />
             </a>
           </div>
         </div>
@@ -82,11 +86,11 @@ export default function Footer() {
               Pincode 403510
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
-              <span>✉</span>
+              <i className="fa-solid fa-envelope text-sm" aria-hidden="true" />
               <span className="text-white/90">Servicecab@gmail.com</span>
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
-              <span>☎</span>
+              <i className="fa-solid fa-phone text-sm" aria-hidden="true" />
               <span className="text-white/90">+91 90499 120096</span>
             </li>
           </ul>

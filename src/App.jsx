@@ -7,6 +7,7 @@ import About from "./pages/About.jsx";
 import OurTaxi from "./pages/OurTaxi.jsx";
 import BookRide from "./pages/BookRide.jsx";
 import Contact from "./pages/Contact.jsx";
+import Gallery from "./pages/Gallery.jsx";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/taxi" element={<OurTaxi />} />
           <Route path="/book" element={<BookRide />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
       <Footer />
