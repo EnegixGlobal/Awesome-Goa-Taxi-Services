@@ -59,7 +59,7 @@ export default function Header() {
           </span>
         </div>
         <div className="flex justify-center items-center">
-          <img src={logo} alt="Website logo" className="h-16 object-contain" />
+          <img src={logo} alt="Website logo" className="h-20 object-contain" />
         </div>
         <div className="flex justify-end items-center gap-5 text-white/90">
           <a
@@ -80,11 +80,8 @@ export default function Header() {
       </div>
       {/* Mobile Bar */}
       <div className="md:hidden flex items-center justify-between px-5 pt-4">
-        <div className="flex items-center gap-3">
-          <img src={logo} alt="Logo" className="h-12 w-12 object-contain" />
-          <span className="text-lg font-bold tracking-wide">
-            <span className="text-brandYellow">Goa</span> Taxi
-          </span>
+        <div className="flex items-center -ml-1">
+          <img src={logo} alt="Logo" className="h-32 w-32 object-contain" />
         </div>
         <button
           onClick={() => setOpen((o) => !o)}
