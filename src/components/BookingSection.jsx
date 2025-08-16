@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 
 // Booking section with form submission via formsubmit.co
 // Assumption: using the header email for receiving form submissions. Replace if needed.
 export default function BookingSection() {
+  // Local state for date so we can show a placeholder (native date inputs ignore placeholder on many mobile browsers)
+  const [date, setDate] = useState("");
+  const dateRef = useRef(null);
   return (
     <section
       id="book"
@@ -84,15 +87,43 @@ export default function BookingSection() {
             </div>
             <div className="col-span-1 relative">
               <input
-                type="date"
+                ref={dateRef}
+                // When empty we keep type=text so placeholder shows; on focus we switch to date
+                type={date ? "date" : "text"}
                 name="date"
                 required
-                placeholder="Select Date"
-                className="w-full h-20 rounded-full bg-brandGray px-10 pr-14 text-sm md:text-base placeholder-white/35 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition appearance-none [color-scheme:dark] [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:right-0"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                onFocus={(e) => {
+                  if (!date) e.target.type = "date";
+                }}
+                onBlur={(e) => {
+                  if (!date) e.target.type = "text"; // revert to text so placeholder is visible again
+                }}
+                placeholder="DD/MM/YYYY"
+                className="w-full h-20 rounded-full bg-brandGray px-10 pr-14 text-sm md:text-base text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-brandYellow/60 transition"
               />
-              <span className="absolute right-8 top-1/2 -translate-y-1/2 text-brandYellow text-xl pointer-events-none">
-                <i className="fa-regular fa-calendar"></i>
-              </span>
+              <button
+                type="button"
+                aria-label="Open date picker"
+                onClick={() => {
+                  // Try the new showPicker API if available; fallback to focusing
+                  if (dateRef.current) {
+                    if (typeof dateRef.current.showPicker === "function") {
+                      try {
+                        dateRef.current.showPicker();
+                      } catch (_) {
+                        dateRef.current.focus();
+                      }
+                    } else {
+                      dateRef.current.focus();
+                    }
+                  }
+                }}
+                className="absolute right-6 top-1/2 -translate-y-1/2 text-brandYellow text-xl p-2 rounded-full hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-brandYellow/50"
+              >
+                <i className="fa-regular fa-calendar" />
+              </button>
             </div>
             <div className="col-span-1 relative md:col-span-1">
               <select
