@@ -21,7 +21,7 @@ export default function StatsSection() {
         <h2 className="text-3xl sm:text-4xl font-extrabold mb-16 tracking-tight">
           Numbers speak
         </h2>
-        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-7 grid-cols-2 lg:grid-cols-4">
           {stats.map((s) => (
             <div
               key={s.label}
