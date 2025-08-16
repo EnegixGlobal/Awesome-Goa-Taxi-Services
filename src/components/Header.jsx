@@ -1,17 +1,51 @@
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/Website icon and favicon/icon.png";
 
+// Top-level nav; internal section hashes only valid on home page
 const navItems = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Our Taxi", href: "#taxi" },
-  { label: "Book A Ride", href: "#book" },
-  { label: "Contact", href: "#contact" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about" },
+  { label: "Our Taxi", hash: "#taxi" },
+  { label: "Book A Ride", hash: "#book" },
+  { label: "Contact", hash: "#contact" },
+  { label: "Gallery", hash: "#gallery" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const isHome = location.pathname === "/";
+
+  const renderNavLink = (item) => {
+    if (item.to) {
+      return (
+        <Link
+          key={item.label}
+          to={item.to}
+          onClick={() => setOpen(false)}
+          className="uppercase hover:text-black/70 text-black transition-colors flex items-center h-full leading-none"
+        >
+          {item.label}
+        </Link>
+      );
+    }
+    const disabled = !isHome; // hashes only scroll on home page
+    return (
+      <a
+        key={item.label}
+        href={disabled ? "/#" + item.hash?.replace("#", "") : item.hash}
+        onClick={() => setOpen(false)}
+        className={`uppercase ${
+          disabled ? "opacity-50 cursor-not-allowed" : "hover:text-black/70"
+        } text-black transition-colors flex items-center h-full leading-none`}
+        aria-disabled={disabled}
+      >
+        {item.label}
+      </a>
+    );
+  };
   return (
     <header className="w-full absolute top-0 left-0 z-30">
       {/* Desktop Utility Bar */}
@@ -67,16 +101,32 @@ export default function Header() {
       {open && (
         <div className="md:hidden px-5 mt-4">
           <nav className="bg-brandYellow rounded-3xl p-6 space-y-4 shadow-pill">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                onClick={() => setOpen(false)}
-                className="block uppercase tracking-[0.25em] text-sm font-semibold text-black/90 hover:text-black"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map((item) =>
+              item.to ? (
+                <Link
+                  key={item.label}
+                  to={item.to}
+                  onClick={() => setOpen(false)}
+                  className="block uppercase tracking-[0.25em] text-sm font-semibold text-black/90 hover:text-black"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.hash}
+                  onClick={() => setOpen(false)}
+                  className={`block uppercase tracking-[0.25em] text-sm font-semibold text-black/90 ${
+                    !isHome
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:text-black"
+                  }`}
+                  aria-disabled={!isHome}
+                >
+                  {item.label}
+                </a>
+              )
+            )}
             <a
               href="tel:+919322119572"
               className="flex items-center gap-4 bg-brandBlack text-white rounded-2xl px-5 py-4"
@@ -103,15 +153,7 @@ export default function Header() {
       <div className="hidden md:flex justify-center mt-6">
         <div className="flex items-stretch bg-brandYellow rounded-full overflow-hidden shadow-pill max-w-7xl w-full md:w-auto h-[92px]">
           <nav className="hidden md:flex items-center h-full px-16 gap-12 text-sm font-semibold tracking-[0.25em]">
-            {navItems.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className="uppercase hover:text-black/70 text-black transition-colors flex items-center h-full leading-none"
-              >
-                {item.label}
-              </a>
-            ))}
+            {navItems.map(renderNavLink)}
           </nav>
           <div className="bg-brandBlack text-white flex items-center gap-5 pr-12 pl-3 rounded-l-full h-full">
             <div

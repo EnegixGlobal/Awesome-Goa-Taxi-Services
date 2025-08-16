@@ -11,7 +11,7 @@ import FAQsSection from "../components/FAQsSection.jsx";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-brandBlack text-white">
       <HeroSlider />
       <BookingSection />
       <HighlightSection />

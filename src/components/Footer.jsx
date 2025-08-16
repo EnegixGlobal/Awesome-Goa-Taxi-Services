@@ -4,6 +4,7 @@ import React from "react";
 const columnLinks = {
   useful: [
     { label: "Home", href: "#" },
+    { label: "About", href: "/about" },
     { label: "Book A Ride", href: "#book" },
     { label: "Fleet", href: "#fleet" },
     { label: "Packages", href: "#packages" },
@@ -86,7 +87,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <span>☎</span>
-              <span className="text-white/90">+91 93221 19572</span>
+              <span className="text-white/90">+91 90499 120096</span>
             </li>
           </ul>
         </div>
