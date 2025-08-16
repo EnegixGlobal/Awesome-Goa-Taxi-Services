@@ -41,8 +41,8 @@ export default function CompanyIntro() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="absolute -top-10 -left-10 w-60 h-60 md:w-72 md:h-72 rounded-full bg-brandYellow text-black flex flex-col items-center justify-center font-extrabold text-3xl md:text-4xl shadow-xl">
-            <span className="text-xs font-semibold tracking-wider mb-1 uppercase text-black/70">
+          <div className="absolute -top-6 -left-6 w-28 h-28 sm:w-36 sm:h-36 md:w-52 md:h-52 lg:w-56 lg:h-56 rounded-full bg-brandYellow text-black flex flex-col items-center justify-center font-extrabold text-lg sm:text-xl md:text-3xl lg:text-3xl shadow-xl">
+            <span className="text-[8px] sm:text-[9px] md:text-[11px] font-semibold tracking-wider mb-1 uppercase text-black/70">
               Trusted by
             </span>
             <span>1000+</span>
