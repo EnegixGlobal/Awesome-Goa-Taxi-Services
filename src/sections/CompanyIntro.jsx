@@ -26,10 +26,10 @@ export default function CompanyIntro() {
           </p>
           <div className="mt-16">
             <a
-              href="#contact"
+              href="/contact"
               className="inline-block bg-brandYellow text-black font-semibold px-14 py-6 rounded-full text-lg shadow-pill hover:brightness-95 transition"
             >
-              Discover More
+              Contact Us
             </a>
           </div>
         </div>
