@@ -96,7 +96,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <i className="fa-solid fa-phone text-sm" aria-hidden="true" />
-              <span className="text-white/90">+91 90499 120096</span>
+              <span className="text-white/90">+91 90496 61996</span>
             </li>
           </ul>
         </div>

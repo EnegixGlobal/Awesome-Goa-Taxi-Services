@@ -125,7 +125,7 @@ export default function Header() {
               )
             )}
             <a
-              href="tel:+9190499120096"
+              href="tel:+919049661996"
               className="flex items-center gap-4 bg-brandBlack text-white rounded-2xl px-5 py-4"
             >
               <span
@@ -136,7 +136,7 @@ export default function Header() {
               </span>
               <span className="text-left leading-tight">
                 <span className="block font-bold text-brandYellow text-base">
-                  +91 90499 120096
+                  +91 90496 61996
                 </span>
                 <span className="block text-[11px] uppercase tracking-wider">
                   Phone No.
@@ -161,7 +161,7 @@ export default function Header() {
             </div>
             <div className="leading-tight text-[15px]">
               <div className="font-bold text-brandYellow text-[17px]">
-                +91 90499 120096
+                +91 90496 61996
               </div>
               <div className="uppercase tracking-wider text-[12px]">
                 Phone No.

@@ -84,10 +84,10 @@ export default function HighlightSection() {
                 </div>
               </div>
               <a
-                href="tel:+9190499120096"
+                href="tel:+919049661996"
                 className="text-lg sm:text-xl font-extrabold tracking-wide hover:text-brandYellow transition"
               >
-                +91 90499 120096
+                +91 90496 61996
               </a>
             </div>
           </div>

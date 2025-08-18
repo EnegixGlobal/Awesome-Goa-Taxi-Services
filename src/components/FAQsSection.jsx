@@ -93,7 +93,7 @@ export default function FAQsSection() {
             </h3>
           </div>
           <a
-            href="tel:+9190499120096"
+            href="tel:+919049661996"
             className="inline-flex items-center justify-center bg-brandBlack text-white rounded-full px-8 h-14 text-sm font-semibold hover:opacity-90 transition self-start focus:outline-none focus:ring-2 focus:ring-brandBlack/40"
             aria-label="Call to book taxi"
           >

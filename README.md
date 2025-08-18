@@ -26,7 +26,7 @@ Deploy the generated `dist/` folder (works on Vercel/Netlify/static hosting).
 
 ### Important Customizations
 
-- Phone call CTAs link to +91 90499 120096.
+- Phone call CTAs link to +91 90496 61996.
 - Booking form posts via formsubmit.co.
 - Mobile optimizations: reduced hero & form height, custom date input placeholder.
 
