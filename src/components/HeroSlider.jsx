@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+// Desktop slides
 import slide1 from "../../images/hero slider images/1.jpg";
 import slide2 from "../../images/hero slider images/2.jpg";
 import slide3 from "../../images/hero slider images/3.png";
 import slide4 from "../../images/hero slider images/4.png";
 import slide5 from "../../images/hero slider images/5.png";
+// Mobile-optimized slides (same ordering)
+import mslide1 from "../../images/mob-slider-images/1.jpg";
+import mslide2 from "../../images/mob-slider-images/2.jpg";
+import mslide3 from "../../images/mob-slider-images/3.jpg";
+import mslide4 from "../../images/mob-slider-images/4.jpg";
+import mslide5 from "../../images/mob-slider-images/5.jpg";
 
 const slides = [
   {
@@ -12,18 +19,21 @@ const slides = [
     title: "Cheap & Trusted Taxi Company",
     subtitle: "Enjoy your comfortable trip with Awesome Goa Taxi Service",
     image: slide1,
+    mobile: mslide1,
   },
   {
     id: 2,
     title: "Reliable Airport Transfers",
     subtitle: "On time, every time—stress-free travel to and from the airport",
     image: slide2,
+    mobile: mslide2,
   },
   {
     id: 3,
     title: "Explore Goa Comfortably",
     subtitle: "Safe, clean, and affordable rides across scenic destinations",
     image: slide3,
+    mobile: mslide3,
   },
   {
     id: 4,
@@ -31,12 +41,14 @@ const slides = [
     subtitle:
       "Experienced, courteous, and dedicated to your safety and comfort",
     image: slide4,
+    mobile: mslide4,
   },
   {
     id: 5,
     title: "Book Your Ride Easily",
     subtitle: "Fast booking and transparent pricing for every journey",
     image: slide5,
+    mobile: mslide5,
   },
 ];
 
@@ -64,11 +76,16 @@ export default function HeroSlider() {
             i === index ? "opacity-100" : "opacity-0"
           }`}
         >
-          <img
-            src={s.image}
-            alt="Slide"
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            {/* Serve mobile-optimized image for small screens */}
+            <source media="(max-width: 640px)" srcSet={s.mobile || s.image} />
+            <img
+              src={s.image}
+              alt={s.title}
+              className="w-full h-full object-cover"
+              loading="eager"
+            />
+          </picture>
           <div className="absolute inset-0 bg-black/60" />
         </div>
       ))}
