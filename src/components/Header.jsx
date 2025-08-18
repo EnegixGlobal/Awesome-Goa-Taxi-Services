@@ -55,7 +55,7 @@ export default function Header() {
             <i className="fa-solid fa-envelope"></i>
           </span>
           <span className="font-medium text-white/90">
-            servicecab@gmail.com
+            awesomegoataxiservicecab@gmail.com
           </span>
         </div>
         <div className="flex justify-center items-center">

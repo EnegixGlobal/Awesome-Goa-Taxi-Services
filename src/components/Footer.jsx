@@ -92,7 +92,9 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <i className="fa-solid fa-envelope text-sm" aria-hidden="true" />
-              <span className="text-white/90">servicecab@gmail.com</span>
+              <span className="text-white/90">
+                awesomegoataxiservicecab@gmail.com
+              </span>
             </li>
             <li className="flex items-center gap-2 text-brandYellow">
               <i className="fa-solid fa-phone text-sm" aria-hidden="true" />
