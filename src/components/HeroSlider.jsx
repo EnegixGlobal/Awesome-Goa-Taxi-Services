@@ -16,37 +16,41 @@ import mslide5 from "../../images/mob-slider-images/5.jpg";
 const slides = [
   {
     id: 1,
-    title: "Cheap & Trusted Taxi Company",
-    subtitle: "Enjoy your comfortable trip with Awesome Goa Taxi Service",
+    title: "Trusted Goa Taxi Service (Estd. 2012)",
+    subtitle:
+      "Trusted by 10,000+ customers • Certified & verified drivers for every ride",
     image: slide1,
     mobile: mslide1,
   },
   {
     id: 2,
-    title: "Reliable Airport Transfers",
-    subtitle: "On time, every time—stress-free travel to and from the airport",
+    title: "Affordable & Cost‑Effective Rides",
+    subtitle:
+      "Best value for money with transparent fares & lowest price guarantee",
     image: slide2,
     mobile: mslide2,
   },
   {
     id: 3,
-    title: "Explore Goa Comfortably",
-    subtitle: "Safe, clean, and affordable rides across scenic destinations",
+    title: "Premium Quality Guaranteed",
+    subtitle:
+      "Clean, well‑maintained fleet • Quality at the right price every time",
     image: slide3,
     mobile: mslide3,
   },
   {
     id: 4,
-    title: "Professional Drivers",
+    title: "Certified & Professional Drivers",
     subtitle:
-      "Experienced, courteous, and dedicated to your safety and comfort",
+      "Experienced, polite & verified – on‑time airport & outstation transfers since 2012",
     image: slide4,
     mobile: mslide4,
   },
   {
     id: 5,
-    title: "Book Your Ride Easily",
-    subtitle: "Fast booking and transparent pricing for every journey",
+    title: "Book Fast – Value & Trust Combined",
+    subtitle:
+      "24/7 support • Smart & cost‑effective booking • Safe, reliable & affordable",
     image: slide5,
     mobile: mslide5,
   },
