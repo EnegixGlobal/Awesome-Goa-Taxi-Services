@@ -98,10 +98,10 @@ export default function HeroSlider() {
         </p>
         <div className="mt-8 sm:mt-10">
           <Link
-            to="/about"
+            to="/book"
             className="inline-block bg-brandYellow text-black font-semibold px-10 py-4 sm:px-12 sm:py-5 rounded-full text-base sm:text-lg shadow-pill hover:brightness-95 transition focus:outline-none focus:ring-2 focus:ring-brandYellow/60"
           >
-            Learn More
+            Book Now
           </Link>
         </div>
       </div>
