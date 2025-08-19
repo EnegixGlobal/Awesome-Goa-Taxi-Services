@@ -23,7 +23,7 @@ function BookingFormStandalone() {
           </p>
         </div>
         <form
-          action="https://formsubmit.co/ubedshaikh6089@gmail.com"
+          action="https://formsubmit.co/awesomegoataxiservicecab@gmail.com"
           method="POST"
           className="space-y-10"
         >

@@ -30,7 +30,7 @@ export default function BookingSection() {
 
         {/* Right: Form */}
         <form
-          action="https://formsubmit.co/ubedshaikh6089@gmail.com"
+          action="https://formsubmit.co/awesomegoataxiservicecab@gmail.com"
           method="POST"
           className="flex-1 w-full"
         >

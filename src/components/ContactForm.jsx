@@ -14,7 +14,7 @@ export default function ContactForm() {
           </h2>
         </div>
         <form
-          action="https://formsubmit.co/ubedshaikh6089@gmail.com"
+          action="https://formsubmit.co/awesomegoataxiservicecab@gmail.com"
           method="POST"
           className="space-y-10"
         >
