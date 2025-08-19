@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHero from "../sections/PageHero.jsx";
+import ThankYouModal from "../components/ThankYouModal.jsx";
 import { vehicles } from "../data/vehicles.js";
 
 function BookingFormStandalone() {
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+      });
+
+      // Show thank you modal
+      setShowThankYou(true);
+      // Reset form
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
+  };
   return (
     <section className="py-24 bg-white text-brandBlack" id="booking-form">
       <div className="max-w-6xl mx-auto px-6">
@@ -23,6 +44,7 @@ function BookingFormStandalone() {
           </p>
         </div>
         <form
+          onSubmit={handleSubmit}
           action="https://formsubmit.co/awesomegoataxiservicecab@gmail.com"
           method="POST"
           className="space-y-10"
@@ -34,11 +56,6 @@ function BookingFormStandalone() {
           />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://www.awesomegoataxi.in/"
-          />
           <fieldset className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             <legend className="sr-only">Select Information</legend>
             <input
@@ -179,6 +196,12 @@ function BookingFormStandalone() {
             </button>
           </div>
         </form>
+
+        <ThankYouModal
+          isOpen={showThankYou}
+          onClose={() => setShowThankYou(false)}
+          message="Your detailed booking request has been submitted! Our team will contact you soon with confirmation."
+        />
       </div>
     </section>
   );

@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
+import ThankYouModal from "./ThankYouModal.jsx";
 
 export default function ContactForm() {
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+      });
+
+      // Show thank you modal
+      setShowThankYou(true);
+      // Reset form
+      form.reset();
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
+  };
   return (
     <section className="py-28">
       <div className="max-w-5xl mx-auto px-6">
@@ -14,17 +35,13 @@ export default function ContactForm() {
           </h2>
         </div>
         <form
+          onSubmit={handleSubmit}
           action="https://formsubmit.co/awesomegoataxiservicecab@gmail.com"
           method="POST"
           className="space-y-10"
         >
           <input type="hidden" name="_subject" value="New Contact Message" />
           <input type="hidden" name="_captcha" value="false" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://www.awesomegoataxi.in/"
-          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <input
               name="name"
@@ -70,6 +87,12 @@ export default function ContactForm() {
             </div>
           </div>
         </form>
+
+        <ThankYouModal
+          isOpen={showThankYou}
+          onClose={() => setShowThankYou(false)}
+          message="Thank you for contacting us! We'll get back to you soon."
+        />
       </div>
     </section>
   );

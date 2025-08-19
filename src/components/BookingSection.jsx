@@ -1,11 +1,32 @@
 import React, { useState, useRef } from "react";
+import ThankYouModal from "./ThankYouModal.jsx";
 
 // Booking section with form submission via formsubmit.co
-// Assumption: using the header email for receiving form submissions. Replace if needed.
 export default function BookingSection() {
   // Local state for date so we can show a placeholder (native date inputs ignore placeholder on many mobile browsers)
   const [date, setDate] = useState("");
+  const [showThankYou, setShowThankYou] = useState(false);
   const dateRef = useRef(null);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    try {
+      await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+      });
+
+      // Show thank you modal
+      setShowThankYou(true);
+      // Reset form
+      form.reset();
+      setDate("");
+    } catch (error) {
+      console.error("Form submission error:", error);
+    }
+  };
   return (
     <section
       id="book"
@@ -30,6 +51,7 @@ export default function BookingSection() {
 
         {/* Right: Form */}
         <form
+          onSubmit={handleSubmit}
           action="https://formsubmit.co/awesomegoataxiservicecab@gmail.com"
           method="POST"
           className="flex-1 w-full"
@@ -38,11 +60,6 @@ export default function BookingSection() {
           <input type="hidden" name="_subject" value="New Taxi Booking" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          <input
-            type="hidden"
-            name="_next"
-            value="https://www.awesomegoataxi.in/"
-          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 xl:gap-8">
             <div className="col-span-1">
               <input
@@ -165,6 +182,12 @@ export default function BookingSection() {
             </div>
           </div>
         </form>
+
+        <ThankYouModal
+          isOpen={showThankYou}
+          onClose={() => setShowThankYou(false)}
+          message="Your taxi booking request has been submitted! We'll contact you shortly to confirm."
+        />
       </div>
     </section>
   );
