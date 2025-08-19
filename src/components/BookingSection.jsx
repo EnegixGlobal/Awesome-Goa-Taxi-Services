@@ -38,6 +38,11 @@ export default function BookingSection() {
           <input type="hidden" name="_subject" value="New Taxi Booking" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://www.awesomegoataxi.in/"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5 xl:gap-8">
             <div className="col-span-1">
               <input

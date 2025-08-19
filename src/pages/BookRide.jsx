@@ -34,6 +34,11 @@ function BookingFormStandalone() {
           />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://www.awesomegoataxi.in/"
+          />
           <fieldset className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
             <legend className="sr-only">Select Information</legend>
             <input
