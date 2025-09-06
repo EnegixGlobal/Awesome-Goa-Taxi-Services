@@ -8,6 +8,7 @@ import ChooseTaxiSection from "../components/ChooseTaxiSection.jsx";
 import TourPackagesSection from "../components/TourPackagesSection.jsx";
 import TestimonialsSection from "../components/TestimonialsSection.jsx";
 import FAQsSection from "../components/FAQsSection.jsx";
+import SpecialOffersSection from "../components/SpecialOffersSection.jsx";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <TestimonialsSection />
       <TourPackagesSection />
       <FAQsSection />
+      <SpecialOffersSection />
     </main>
   );
 }
