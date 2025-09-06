@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import imgMain from "../../images/third section/1.png";
 import imgAlt from "../../images/third section/2.jpeg";
+import VideoModal from "./VideoModal.jsx";
 
 export default function HighlightSection() {
+  const [showVideo, setShowVideo] = useState(false);
   return (
     <section
       className="bg-white text-brandBlack px-6 lg:px-10 py-16 sm:py-24"
@@ -54,7 +56,8 @@ export default function HighlightSection() {
                 <button
                   type="button"
                   aria-label="Play video"
-                  className="absolute inset-0 m-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brandYellow text-brandBlack text-xl sm:text-2xl grid place-items-center shadow-pill hover:scale-105 transition"
+                  onClick={() => setShowVideo(true)}
+                  className="absolute inset-0 m-auto w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-brandYellow text-brandBlack text-xl sm:text-2xl grid place-items-center shadow-pill hover:scale-105 transition focus:outline-none focus:ring-4 focus:ring-brandYellow/50"
                 >
                   <i className="fa-solid fa-play" />
                 </button>
@@ -92,6 +95,7 @@ export default function HighlightSection() {
             </div>
           </div>
         </div>
+        <VideoModal open={showVideo} onClose={() => setShowVideo(false)} />
       </div>
     </section>
   );
