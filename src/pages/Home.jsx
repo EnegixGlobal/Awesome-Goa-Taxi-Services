@@ -15,6 +15,7 @@ export default function Home() {
     <main className="bg-brandBlack text-white">
       <HeroSlider />
       <BookingSection />
+      <SpecialOffersSection />
       <HighlightSection />
       <StatsSection />
       <WhyChooseUs />
@@ -22,7 +23,6 @@ export default function Home() {
       <TestimonialsSection />
       <TourPackagesSection />
       <FAQsSection />
-      <SpecialOffersSection />
     </main>
   );
 }
