@@ -30,11 +30,11 @@ export default function SpecialOffersSection() {
           <span className="block">Don’t Miss Out</span>
         </h2>
 
-        <div className="grid gap-8 lg:gap-12 md:grid-cols-2">
+        <div className="grid gap-8 lg:gap-12 md:grid-cols-2 place-items-center">
           {offers.map((o) => (
             <div
               key={o.id}
-              className="relative rounded-3xl overflow-hidden shadow-[0_6px_28px_-6px_rgba(0,0,0,0.25)] group bg-black/5"
+              className="relative rounded-3xl overflow-hidden shadow-[0_6px_28px_-6px_rgba(0,0,0,0.25)] group bg-black/5 w-[70%] sm:w-[65%] md:w-[80%] lg:w-[75%] xl:w-[70%] max-w-[520px]"
             >
               <div className="w-full">
                 <img
