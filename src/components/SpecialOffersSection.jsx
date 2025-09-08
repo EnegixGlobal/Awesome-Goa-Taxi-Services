@@ -24,10 +24,10 @@ export default function SpecialOffersSection() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center gap-2 text-[11px] font-semibold tracking-wide text-brandBlack/70 mb-4">
           <span className="w-2 h-2 rounded-full bg-brandYellow inline-block" />
-          <span>Special Offers / Limited Time</span>
+          <span>Exclusive Deals</span>
         </div>
-        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-center mb-14 sm:mb-20">
-          Special Offers / Limited Time
+        <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-center mb-14 sm:mb-20 leading-tight">
+          <span className="block">Don’t Miss Out</span>
         </h2>
 
         <div className="grid gap-8 lg:gap-12 md:grid-cols-2">
